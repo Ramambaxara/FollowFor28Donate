@@ -42,7 +42,7 @@ def draw_plot(x, y, distance):
     ax2.bar(just_days, daily_diffs)
 
     ax1.set_ylabel('amount')
-    ax2.set_ylabel('dayly donation')
+    ax2.set_ylabel('daily donation')
     plt.xlabel('datetime')
     ax1.grid(True)
     ax2.grid(True)
