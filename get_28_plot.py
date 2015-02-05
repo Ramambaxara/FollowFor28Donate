@@ -15,11 +15,7 @@ def draw_plot(x, y, distance):
     ax1.xaxis.set_major_formatter( DateFormatter('%d.%m.%Y') )
     fig.autofmt_xdate()
 
-    all_diffs = []
-    last = int(y[0])
-    for i in y:
-        all_diffs.append(int(i) - last)
-        last = int(i)
+    all_diffs = [int(t[0]) - int(t[1]) for t in zip(y, [y[0]]+y[:-1])]
 
     last_day = x[0]
     daily_diffs = [0]
